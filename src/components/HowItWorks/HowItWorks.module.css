@@ -1,0 +1,143 @@
+.howItWorksSection {
+  padding: 12rem 0 8rem;
+  background-color: var(--bg-white);
+}
+
+/* Steps Grid */
+.stepsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 4rem;
+}
+
+.stepCard {
+  background-color: var(--secondary-blue);
+  border-radius: 16px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stepCard:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-medium);
+}
+
+.stepNumber {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--primary-blue);
+  color: white;
+  font-size: 0.85rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stepIcon {
+  color: var(--primary-blue);
+  margin-bottom: 1rem;
+}
+
+.stepCard h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+}
+
+.stepCard p {
+  font-size: 0.85rem;
+  color: var(--text-gray);
+  line-height: 1.4;
+}
+
+/* Comparison Cards */
+.cardsContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: var(--card-bg);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+}
+
+.card {
+  padding: 3rem;
+}
+
+.patientCard {
+  background-color: #e2effd;
+}
+
+.hospitalCard {
+  background-color: #f0f7ff;
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.cardHeader h3 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.listItem {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.numberBadge {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: #b0d8fc;
+  color: var(--primary-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+@media (max-width: 900px) {
+  .stepsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .cardsContainer {
+    grid-template-columns: 1fr;
+  }
+  .card {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .stepsGrid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,56 @@
+import Link from 'next/link';
+import styles from './Hero.module.css';
+
+export default function Hero() {
+  return (
+    <section className={styles.heroSection}>
+      <div className={`container ${styles.heroContent}`}>
+        <div className={styles.textContent}>
+          <h1>
+            Your complete <span className={styles.highlight}>care journey</span> after hospital
+          </h1>
+          <p className={styles.subHeadline}>
+            Post-discharge care, digital health records, medicine delivery, 
+            lab tests &amp; radiology– seamlessly connected. <span className={styles.highlight}>All in one place</span>
+          </p>
+          <div className={styles.actions}>
+            <Link href="#services">
+              <button className={styles.btnGetStarted}>Get Started</button>
+            </Link>
+            <Link href="#how-it-works">
+              <button className={styles.btnBookFollowUp}>Book Follow-Up</button>
+            </Link>
+          </div>
+        </div>
+        
+        <div className={styles.imageContent}>
+          <div className={styles.heroImagePlaceholder}>
+            <div className={styles.laptopFrame}>
+              <div className={styles.laptopScreen}>Telehealth Preview</div>
+            </div>
+            <div className={styles.phoneFrame}>
+              <div className={styles.phoneScreen}>App Preview</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className={styles.statsWrapper}>
+        <div className={`glass-panel ${styles.statsBar}`}>
+          <div className={styles.statItem}>
+            <div className={styles.statValue}>30%</div>
+            <div className={styles.statLabel}>Reduction in<br/>Readmission</div>
+          </div>
+          <div className={styles.statItem}>
+            <div className={styles.statValue}>10,000+</div>
+            <div className={styles.statLabel}>Patients<br/>Supported</div>
+          </div>
+          <div className={styles.statItem}>
+            <div className={styles.statValue}>24/7</div>
+            <div className={styles.statLabel}>Care<br/>Support</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}

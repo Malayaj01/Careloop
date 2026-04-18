@@ -1,0 +1,59 @@
+.leadSection {
+  padding: 8rem 0;
+  background-color: var(--bg-white);
+}
+
+.leadGrid {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.leadCard {
+  flex: 1;
+  min-width: 300px;
+  max-width: 550px;
+  background-color: var(--bg-white);
+  border: 1px solid var(--border-light);
+  border-radius: 12px;
+  padding: 1.5rem;
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+}
+
+.imagePlaceholder {
+  width: 150px;
+  height: 200px;
+  background: #e2e8f0;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #64748b;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.leadContent h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 0.75rem;
+}
+
+.leadContent p {
+  font-size: 0.95rem;
+  color: var(--text-gray);
+  line-height: 1.5;
+}
+
+@media (max-width: 600px) {
+  .leadCard {
+    flex-direction: column;
+    text-align: center;
+  }
+}

@@ -1,0 +1,206 @@
+.heroSection {
+  background: linear-gradient(180deg, var(--bg-gradient-top) 0%, var(--bg-gradient-bottom) 100%);
+  padding: 8rem 0;
+  text-align: center;
+}
+
+.heroSubtitle {
+  font-size: 1.25rem;
+  color: var(--text-gray);
+  max-width: 650px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.contactSection {
+  background-color: var(--bg-white);
+  padding: 8rem 0;
+}
+
+.contactGrid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 6rem;
+}
+
+.colTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: var(--text-dark);
+}
+
+.infoCards {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.infoCard {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  background: var(--secondary-blue);
+  padding: 1.5rem 2rem;
+  border-radius: 16px;
+  transition: transform 0.3s ease;
+}
+
+.infoCard:hover {
+  transform: translateX(8px);
+}
+
+.infoIcon {
+  color: var(--primary-blue);
+  flex-shrink: 0;
+}
+
+.infoCard h4 {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--primary-blue);
+  margin-bottom: 0.25rem;
+  text-transform: uppercase;
+}
+
+.infoCard p {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.supportBadge {
+  background: #fff5f5;
+  border: 1px dashed #feb2b2;
+  padding: 1.5rem 2rem;
+  border-radius: 16px;
+  display: flex;
+  gap: 1.25rem;
+  color: #c53030;
+}
+
+.supportBadge h4 {
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.supportBadge p {
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+/* Form */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.formRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.formGroup label {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.formGroup input,
+.formGroup select,
+.formGroup textarea {
+  padding: 1rem 1.25rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.formGroup input:focus,
+.formGroup select:focus,
+.formGroup textarea:focus {
+  border-color: var(--primary-blue);
+  box-shadow: 0 0 0 4px rgba(11, 155, 234, 0.1);
+}
+
+.submitBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  background: linear-gradient(135deg, var(--primary-blue), #51baff);
+  color: white;
+  padding: 1rem 2.5rem;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  align-self: flex-start;
+  box-shadow: 0 10px 20px rgba(11, 155, 234, 0.2);
+}
+
+.submitBtn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 30px rgba(11, 155, 234, 0.3);
+}
+
+/* FAQ */
+.faqSection {
+  background-color: var(--secondary-blue);
+  padding: 8rem 0;
+}
+
+.faqGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.faqCard {
+  background: white;
+  padding: 2rem 2.5rem;
+  border-radius: 20px;
+  box-shadow: var(--shadow-soft);
+}
+
+.faqHead {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.faqHead h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.faqCard p {
+  color: var(--text-gray);
+  line-height: 1.6;
+}
+
+@media (max-width: 1000px) {
+  .contactGrid {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .formRow, .faqGrid {
+    grid-template-columns: 1fr;
+  }
+}

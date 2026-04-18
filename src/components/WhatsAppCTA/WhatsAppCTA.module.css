@@ -1,0 +1,102 @@
+.whatsappSection {
+  padding: 4rem 0;
+  background-color: var(--secondary-blue);
+}
+
+.whatsappCard {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  background: white;
+  border-radius: 20px;
+  padding: 2.5rem 3rem;
+  box-shadow: var(--shadow-soft);
+}
+
+.iconBubble {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: #25d366;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.textContent {
+  flex: 1;
+}
+
+.textContent h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 0.25rem;
+}
+
+.textContent p {
+  font-size: 0.95rem;
+  color: var(--text-gray);
+}
+
+.actions {
+  display: flex;
+  gap: 1rem;
+  flex-shrink: 0;
+}
+
+.whatsappBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #25d366;
+  color: white;
+  padding: 0.85rem 1.5rem;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.whatsappBtn:hover {
+  background: #1ebe5d;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+}
+
+.callBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: transparent;
+  color: var(--primary-blue);
+  border: 2px solid var(--primary-blue);
+  padding: 0.85rem 1.5rem;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.callBtn:hover {
+  background: rgba(11, 155, 234, 0.05);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 900px) {
+  .whatsappCard {
+    flex-direction: column;
+    text-align: center;
+  }
+  .actions {
+    flex-direction: column;
+    width: 100%;
+  }
+  .whatsappBtn, .callBtn {
+    justify-content: center;
+  }
+}
