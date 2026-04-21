@@ -1,13 +1,13 @@
 import React from 'react';
 import { HeartPulse, FileText, Truck, TestTubeDiagonal, Activity, ShieldCheck, Clock, Users, ClipboardCheck, Zap, Bell, Tablet, Search, MapPin } from 'lucide-react';
 
-export interface ServiceFeature {
+interface ServiceFeature {
   icon: React.ReactNode;
   title: string;
   desc: string;
 }
 
-export interface ServiceData {
+interface ServiceData {
   slug: string;
   title: string;
   subtitle: string;
