@@ -47,7 +47,13 @@
 @media (max-width: 900px) {
   .aboutGrid {
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 2.5rem;
+  }
+  .imageContent {
+    order: 2;
+  }
+  .textContent {
+    order: 1;
   }
 }
 

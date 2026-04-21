@@ -185,16 +185,20 @@
     max-width: 100%;
   }
   .actions {
-    flex-direction: column;
-    gap: 0.75rem;
+    flex-direction: row;
+    gap: 0.5rem;
   }
   .actions a {
-    width: 100%;
+    flex: 1;
+    width: auto;
   }
   .btnGetStarted,
   .btnBookFollowUp {
     width: 100%;
+    padding: 0.75rem 0.25rem;
+    font-size: 0.85rem;
     justify-content: center;
+    text-align: center;
   }
   .statsBar {
     padding: 1.5rem;

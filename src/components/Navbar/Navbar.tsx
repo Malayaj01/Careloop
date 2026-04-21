@@ -26,10 +26,10 @@ export default function Navbar() {
           <Image 
             src="/logo.png" 
             alt="Careloop Healthcare Logo" 
-            width={180} 
-            height={80} 
+            width={240} 
+            height={70} 
             className={styles.logoImage}
-            style={{ objectFit: 'contain' }}
+            style={{ objectFit: 'contain', objectPosition: 'left center' }}
             priority
           />
         </Link>

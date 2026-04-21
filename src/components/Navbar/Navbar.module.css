@@ -8,10 +8,15 @@
 .logo {
   display: flex;
   align-items: center;
+  margin-left: -1rem;
 }
 
 .logoImage {
   display: block;
+  width: 140px;
+  height: auto;
+  transform: scale(1.15);
+  transform-origin: left center;
 }
 
 .navLinks {
