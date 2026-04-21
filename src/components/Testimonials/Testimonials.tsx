@@ -39,7 +39,7 @@ export default function Testimonials() {
                   <Star key={i} size={16} fill="currentColor" />
                 ))}
               </div>
-              <p className={styles.quoteText}>"{item.quote}"</p>
+              <p className={styles.quoteText}>&quot;{item.quote}&quot;</p>
               <div className={styles.authorInfo}>
                 <div className={styles.avatarPlaceholder}>
                   {item.name.charAt(0)}

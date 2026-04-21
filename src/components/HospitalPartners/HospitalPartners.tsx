@@ -30,7 +30,7 @@ export default function HospitalPartners() {
       <div className="container">
         <h2 className="section-title">Our Hospital Partners</h2>
         <p className={styles.leadText}>
-          We collaborate with the region's top medical facilities to ensure your post-discharge care is securely connected to your treating specialists.
+          We collaborate with the region&apos;s top medical facilities to ensure your post-discharge care is securely connected to your treating specialists.
         </p>
         
         <div className={styles.scrollWrapper}>

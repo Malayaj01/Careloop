@@ -57,7 +57,7 @@ export default async function ServicePage({ params }: PageProps) {
                 <span className="text-primary">{service.title}</span>
               </h2>
               <p style={{ color: 'var(--text-gray)', marginBottom: '2.5rem', fontSize: '1.1rem', lineHeight: 1.7 }}>
-                At CareLoop, we don't just provide services; we provide a safety net. 
+                At CareLoop, we don&apos;t just provide services; we provide a safety net. 
                 Our approach combines clinical excellence with digital convenience.
               </p>
               <div className={styles.benefitsList}>
