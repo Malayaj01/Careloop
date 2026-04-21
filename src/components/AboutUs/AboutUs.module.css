@@ -1,5 +1,5 @@
 .aboutSection {
-  padding: 8rem 0;
+  padding: 4rem 0;
   background-color: var(--bg-white);
 }
 
@@ -17,17 +17,12 @@
   overflow: hidden;
 }
 
-.imagePlaceholder {
+.aboutImage {
   width: 100%;
-  height: 350px;
-  background: linear-gradient(135deg, #e2e8f0, #cbd5e1);
+  height: auto;
   border-radius: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #64748b;
-  font-weight: 700;
-  font-size: 1.25rem;
+  object-fit: cover;
+  box-shadow: 0 8px 30px rgba(11, 155, 234, 0.12);
 }
 
 .textContent h2 {
@@ -52,5 +47,21 @@
 @media (max-width: 900px) {
   .aboutGrid {
     grid-template-columns: 1fr;
+    gap: 2rem;
   }
 }
+
+@media (max-width: 600px) {
+  .aboutSection {
+    padding: 3rem 0;
+  }
+  .textContent h2 {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+  }
+  .textContent p {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+  }
+}
+

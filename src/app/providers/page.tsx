@@ -1,29 +1,34 @@
+'use client';
+
+import { useState } from 'react';
 import Navbar from '@/components/Navbar/Navbar';
 import Footer from '@/components/Footer/Footer';
-import { Stethoscope, BarChart3, FileCheck, Users, ArrowRight, ClipboardCheck, Building2, UserPlus, ShieldCheck } from 'lucide-react';
+import { Stethoscope, BarChart3, FileCheck, Users, ArrowRight, ClipboardCheck, Building2, UserPlus, ShieldCheck, CheckCircle2 } from 'lucide-react';
 import styles from './providers.module.css';
 
 export default function ProvidersPage() {
+  const [formStatus, setFormStatus] = useState<'idle' | 'submitting' | 'success'>('idle');
+
   const benefits = [
     {
       icon: <Users size={40} />,
       title: "Manage Patient Follow-Up",
-      desc: "Streamline post-discharge follow-ups with automated reminders and real-time health tracking for every patient."
+      desc: "Streamline post-discharge followups with automated reminders and real-time health tracking for every single patient."
     },
     {
       icon: <BarChart3 size={40} />,
       title: "Reduce Re-admissions",
-      desc: "Lower readmission rates with proactive monitoring, early alerts, and structured recovery plans."
+      desc: "Lower readmission rates with proactive monitoring, early health alerts, and structured recovery paths."
     },
     {
       icon: <FileCheck size={40} />,
       title: "Digital Records & Engagement",
-      desc: "Access patient records digitally, share reports, and engage with patients through a seamless platform."
+      desc: "Access patient records digitally, share clinical reports, and engage through a unified, secure platform."
     },
     {
       icon: <Stethoscope size={40} />,
       title: "Clinical Dashboard",
-      desc: "Get a bird's-eye view of all your patients' recovery progress, vitals, and medication adherence."
+      desc: "Get a bird's-eye view of all your patients' recovery progress, vitals, and their medicine adherence."
     }
   ];
 
@@ -31,24 +36,30 @@ export default function ProvidersPage() {
     {
       icon: <Building2 />,
       title: "Register Your Facility",
-      desc: "Sign up your hospital or clinic on the CareLoop platform to get started."
+      desc: "Sign up your hospital or clinic on the CareLoop platform to get started with our network."
     },
     {
       icon: <UserPlus />,
       title: "Add Care Teams",
-      desc: "Onboard your doctors, nurses, and discharge coordinators to the portal."
+      desc: "Onboard your doctors, nurses, and discharge coordinators effortlessly to the portal."
     },
     {
       icon: <ClipboardCheck />,
       title: "Standardize Care Paths",
-      desc: "Set up recovery templates and notification schedules for various conditions."
+      desc: "Set up recovery templates and notification schedules for various conditions and protocols."
     },
     {
       icon: <ShieldCheck />,
       title: "Go Live",
-      desc: "Start enrolling patients and monitor their recovery results in real-time."
+      desc: "Start enrolling patients and monitor their actual recovery results in real-time dashboards."
     }
   ];
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    setFormStatus('submitting');
+    setTimeout(() => setFormStatus('success'), 1500);
+  };
 
   return (
     <main>
@@ -126,13 +137,32 @@ export default function ProvidersPage() {
         <div className="container">
           <div className={styles.inquiryCard}>
             <div className={styles.inquiryContent}>
-              <h2>Request a Demo</h2>
-              <p>Speak with our partnership team to see how CareLoop can help your institution.</p>
-              <form className={styles.formMini}>
-                <input type="text" placeholder="Hospital/Clinic Name" className={styles.inputMini} />
-                <input type="email" placeholder="Work Email Address" className={styles.inputMini} />
-                <button type="submit" className="btn-primary">Get in Touch</button>
-              </form>
+              {formStatus === 'success' ? (
+                <div className={styles.formSuccess}>
+                  <CheckCircle2 size={64} color="#ffffff" style={{marginBottom: '1rem'}} />
+                  <h2>Demo Request Received!</h2>
+                  <p>Our partnership team will reach out to your institution within 24 hours.</p>
+                  <button 
+                    onClick={() => setFormStatus('idle')} 
+                    className="btn-outline" 
+                    style={{borderColor: 'white', color: 'white', marginTop: '2rem'}}
+                  >
+                    Send another request
+                  </button>
+                </div>
+              ) : (
+                <>
+                  <h2>Request a Demo</h2>
+                  <p>Speak with our partnership team to see how CareLoop can help your institution.</p>
+                  <form className={styles.formMini} onSubmit={handleSubmit}>
+                    <input type="text" placeholder="Hospital/Clinic Name" className={styles.inputMini} required />
+                    <input type="email" placeholder="Work Email Address" className={styles.inputMini} required />
+                    <button type="submit" className="btn-primary" disabled={formStatus === 'submitting'}>
+                      {formStatus === 'submitting' ? 'Sending...' : 'Get in Touch'}
+                    </button>
+                  </form>
+                </>
+              )}
             </div>
           </div>
         </div>

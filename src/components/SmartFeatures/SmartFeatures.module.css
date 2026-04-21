@@ -1,5 +1,5 @@
 .smartSection {
-  padding: 8rem 0;
+  padding: 4rem 0;
   background: linear-gradient(180deg, var(--bg-white) 0%, var(--secondary-blue) 100%);
 }
 
@@ -58,5 +58,13 @@
 @media (max-width: 600px) {
   .featuresGrid {
     grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+  .featureCard {
+    padding: 2rem 1.25rem;
+  }
+  .featureCard h3 {
+    font-size: 1rem;
   }
 }
+

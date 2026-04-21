@@ -1,5 +1,5 @@
 .doctorsSection {
-  padding: 8rem 0;
+  padding: 4rem 0;
   background-color: var(--secondary-blue);
 }
 
@@ -119,3 +119,26 @@
     grid-template-columns: 1fr;
   }
 }
+
+@media (max-width: 600px) {
+  .doctorsSection {
+    padding: 3rem 0;
+  }
+  .textContent h2 {
+    font-size: 1.75rem;
+  }
+  .subtitle {
+    font-size: 0.95rem;
+  }
+  .benefitItem {
+    font-size: 0.95rem;
+  }
+  .ctaBtn {
+    width: 100%;
+    justify-content: center;
+  }
+  .dashboardPlaceholder {
+    padding: 1.75rem;
+  }
+}
+

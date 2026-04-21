@@ -61,7 +61,7 @@ export default function HowItWorks() {
           <div className={`${styles.card} ${styles.patientCard}`}>
             <div className={styles.cardHeader}>
               <h3>For Patients</h3>
-              <button className="btn-outline" style={{backgroundColor: 'white', padding: '0.4rem 1.2rem'}}>Register</button>
+              <button className={`${styles.headerBtn} btn-outline`}>Register</button>
             </div>
             <div className={styles.list}>
               {patientSteps.map((step, idx) => (
@@ -76,7 +76,7 @@ export default function HowItWorks() {
           <div className={`${styles.card} ${styles.hospitalCard}`}>
             <div className={styles.cardHeader}>
               <h3>For Hospitals</h3>
-              <button className="btn-outline" style={{backgroundColor: 'white', padding: '0.4rem 1.2rem'}}>Register</button>
+              <button className={`${styles.headerBtn} btn-outline`}>Register</button>
             </div>
             <div className={styles.list}>
               {hospitalSteps.map((step, idx) => (

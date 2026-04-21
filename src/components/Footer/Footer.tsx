@@ -52,19 +52,50 @@ export default function Footer() {
             <ul>
               <li className={styles.contactItem}>
                 <Mail size={16} className={styles.contactIcon} />
-                abc@careloop.in
+                careloop.health26@gmail.com
               </li>
               <li className={styles.contactItem}>
                 <Phone size={16} className={styles.contactIcon} />
-                +91-9xxxxxxxx9
+                +91-9236875061
               </li>
               <li className={styles.contactItem}>
                 <MapPin size={16} className={styles.contactIcon} />
-                Address Line 1, City, State, PINCODE
+                Kakarmatta, Varanasi
               </li>
             </ul>
           </div>
+        </div>
 
+        <div className={styles.footerBottom}>
+          <div className={styles.newsletter}>
+            <h4>Stay Updated</h4>
+            <p>Get the latest updates in post-discharge care.</p>
+            <div className={styles.newsletterField}>
+              <input type="email" placeholder="Enter your email" />
+              <button>Subscribe</button>
+            </div>
+          </div>
+          
+          <div className={styles.trustBadges}>
+            <div className={styles.badge}>
+              <span className={styles.badgeIcon}>🛡️</span>
+              <div>
+                <strong>SSL SECURED</strong>
+                <p>256-bit encryption</p>
+              </div>
+            </div>
+            <div className={styles.badge}>
+              <span className={styles.badgeIcon}>🏥</span>
+              <div>
+                <strong>HIPAA COMPLIANT</strong>
+                <p>Healthcare privacy</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className={styles.copyright}>
+          <p>© {new Date().getFullYear()} Careloop Healthcare. All rights reserved.</p>
         </div>
       </div>
     </footer>

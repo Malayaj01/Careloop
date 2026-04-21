@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import styles from './Hero.module.css';
 
 export default function Hero() {
@@ -24,13 +25,15 @@ export default function Hero() {
         </div>
         
         <div className={styles.imageContent}>
-          <div className={styles.heroImagePlaceholder}>
-            <div className={styles.laptopFrame}>
-              <div className={styles.laptopScreen}>Telehealth Preview</div>
-            </div>
-            <div className={styles.phoneFrame}>
-              <div className={styles.phoneScreen}>App Preview</div>
-            </div>
+          <div className={styles.heroImageWrap}>
+            <Image 
+              src="/assets/hero.png"
+              alt="Careloop Healthcare - Medicine Delivery and Post-Discharge Care"
+              width={600}
+              height={400}
+              className={styles.heroImage}
+              priority
+            />
           </div>
         </div>
       </div>

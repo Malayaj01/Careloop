@@ -1,6 +1,6 @@
 .heroSection {
   background: linear-gradient(180deg, var(--bg-gradient-top) 0%, var(--secondary-blue) 100%);
-  padding: 8rem 0;
+  padding: 5rem 0;
   text-align: center;
 }
 
@@ -202,6 +202,26 @@
   font-size: 1rem;
 }
 
+.formSuccess {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  animation: fadeUp 0.5s ease;
+}
+
+.formSuccess h2 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+}
+
+.formSuccess p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
 @media (max-width: 900px) {
   .grid, .stepsGrid {
     grid-template-columns: repeat(2, 1fr);
@@ -214,5 +234,24 @@
   }
   .heroSection h1 {
     font-size: 2.5rem;
+  }
+  .heroActions {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 0 1rem;
+  }
+  .heroBtn {
+    width: 100%;
+    justify-content: center;
+  }
+  .inquiryCard {
+    padding: 3rem 1.5rem;
+  }
+  .formMini {
+    flex-direction: column;
+    width: 100%;
+  }
+  .inputMini {
+    min-width: 100%;
   }
 }

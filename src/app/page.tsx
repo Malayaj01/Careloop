@@ -5,7 +5,8 @@ import Services from '@/components/Services/Services';
 import SmartFeatures from '@/components/SmartFeatures/SmartFeatures';
 import AboutUs from '@/components/AboutUs/AboutUs';
 import ForDoctors from '@/components/ForDoctors/ForDoctors';
-import TrustBuilders from '@/components/TrustBuilders/TrustBuilders';
+import Testimonials from '@/components/Testimonials/Testimonials';
+import HospitalPartners from '@/components/HospitalPartners/HospitalPartners';
 import ServiceAvailability from '@/components/ServiceAvailability/ServiceAvailability';
 import Footer from '@/components/Footer/Footer';
 
@@ -19,7 +20,8 @@ export default function Home() {
       <SmartFeatures />
       <AboutUs />
       <ForDoctors />
-      <TrustBuilders />
+      <Testimonials />
+      <HospitalPartners />
       <ServiceAvailability />
       <Footer />
     </main>

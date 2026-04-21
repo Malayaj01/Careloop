@@ -1,43 +1,192 @@
+/* ============================================================
+   OurMission – Premium cards with typography hierarchy
+   ============================================================ */
+
 .missionSection {
-  padding: 8rem 0;
-  background-color: var(--bg-white);
+  padding: 7rem 0;
+  background: #ffffff;
+  position: relative;
+  overflow: hidden;
 }
 
-.missionGrid {
-  display: flex;
-  gap: 2rem;
-  justify-content: center;
+/* background accent blob */
+.missionSection::after {
+  content: '';
+  position: absolute;
+  top: -100px;
+  right: -200px;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(11, 155, 234, 0.07) 0%, transparent 70%);
+  filter: blur(60px);
+  pointer-events: none;
+}
+
+/* ── Header ───────────────────────────────────────────────── */
+.headerWrapper {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 4rem auto;
+}
+
+.tag {
+  display: inline-flex;
   align-items: center;
-  flex-wrap: wrap;
+  padding: 0.4rem 1.1rem;
+  background: rgba(11, 155, 234, 0.08);
+  border: 1px solid rgba(11, 155, 234, 0.18);
+  color: var(--primary-blue);
+  border-radius: 30px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
 }
 
+.heading {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  color: var(--text-dark);
+  letter-spacing: -1px;
+  line-height: 1.1;
+  margin: 0 0 0.75rem 0;
+}
+
+.subheading {
+  font-size: 1.05rem;
+  color: var(--text-gray);
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* ── Grid ─────────────────────────────────────────────────── */
+.missionGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* ── Card ─────────────────────────────────────────────────── */
 .missionCard {
-  background-color: var(--secondary-blue);
-  flex: 1;
-  min-width: 250px;
-  max-width: 350px;
-  border-radius: 12px;
-  padding: 3rem 1.5rem;
+  background: #ffffff;
+  border: 1px solid rgba(11, 155, 234, 0.1);
+  border-radius: 24px;
+  padding: 2.5rem 2rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
-  transition: transform 0.3s ease;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  gap: 0.875rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.03), 0 14px 30px rgba(11, 155, 234, 0.05);
+  transition: transform 0.35s cubic-bezier(0.23, 1, 0.32, 1),
+              box-shadow 0.35s ease,
+              border-color 0.35s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* top-right number watermark */
+.missionCard::after {
+  content: attr(data-number);
+  position: absolute;
+  top: 1.25rem;
+  right: 1.5rem;
+  font-size: 3.5rem;
+  font-weight: 900;
+  color: rgba(11, 155, 234, 0.06);
+  letter-spacing: -2px;
+  line-height: 1;
+  pointer-events: none;
 }
 
 .missionCard:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--shadow-medium);
+  transform: translateY(-6px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.05), 0 28px 54px rgba(11, 155, 234, 0.11);
+  border-color: rgba(11, 155, 234, 0.22);
 }
 
-.iconWrapper {
-  margin-bottom: 1.5rem;
+/* ── Card Top Row (icon + number badge) ───────────────────── */
+.cardTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.25rem;
+}
+
+.iconWrap {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  background: rgba(11, 155, 234, 0.1);
   color: var(--primary-blue);
+  border: 1px solid rgba(11, 155, 234, 0.15);
+  flex-shrink: 0;
 }
 
-.missionCard h3 {
-  font-size: 1.25rem;
-  font-weight: 600;
+.numberBadge {
+  font-size: 0.72rem;
+  font-weight: 800;
+  color: var(--primary-blue);
+  background: rgba(11, 155, 234, 0.08);
+  border: 1px solid rgba(11, 155, 234, 0.18);
+  border-radius: 20px;
+  padding: 0.2rem 0.65rem;
+  letter-spacing: 0.5px;
+}
+
+/* ── Card Text ────────────────────────────────────────────── */
+.cardTitle {
+  font-size: 1.3rem;
+  font-weight: 800;
   color: var(--text-dark);
+  letter-spacing: -0.4px;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.cardDesc {
+  font-size: 0.95rem;
+  color: var(--text-gray);
+  line-height: 1.72;
+  margin: 0;
+  flex: 1;
+}
+
+/* bottom accent line */
+.cardLine {
+  height: 3px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, var(--primary-blue), #51baff);
+  margin-top: 0.5rem;
+  opacity: 0;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.missionCard:hover .cardLine {
+  opacity: 1;
+  transform: scaleX(1);
+}
+
+/* ── Responsive ───────────────────────────────────────────── */
+@media (max-width: 900px) {
+  .missionGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .missionGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .missionSection {
+    padding: 5rem 0;
+  }
 }

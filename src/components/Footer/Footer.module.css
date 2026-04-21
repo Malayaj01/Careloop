@@ -5,9 +5,13 @@
 
 .footerGrid {
   display: grid;
-  grid-template-columns: 1fr 1.2fr 1.5fr 1fr;
-  gap: 2rem;
+  grid-template-columns: 1.2fr 1fr 1fr 1.2fr;
+  gap: 4rem;
   align-items: start;
+}
+
+.brandCol {
+  padding-top: 0.25rem; /* Optical alignment with H4 headers */
 }
 
 .footerLinks h4 {
@@ -57,8 +61,125 @@
   }
 }
 
+.footerBottom {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 4rem;
+  margin-top: 4rem;
+  padding-top: 4rem;
+  border-top: 1px solid rgba(18, 24, 38, 0.05);
+}
+
+.newsletter h4 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.newsletter p {
+  font-size: 0.9rem;
+  color: var(--text-gray);
+  margin-bottom: 1.5rem;
+}
+
+.newsletterField {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.newsletterField input {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--border-light);
+  border-radius: 8px;
+  font-size: 0.9rem;
+}
+
+.newsletterField button {
+  background: var(--primary-blue);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+}
+
+.trustBadges {
+  display: flex;
+  gap: 3rem;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.badge {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.badgeIcon {
+  font-size: 1.5rem;
+  padding: 0.75rem;
+  background: var(--bg-white);
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+}
+
+.badge strong {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--text-dark);
+}
+
+.badge p {
+  font-size: 0.75rem;
+  color: var(--text-light);
+}
+
+.copyright {
+  margin-top: 4rem;
+  text-align: center;
+  padding-bottom: 2rem;
+}
+
+.copyright p {
+  font-size: 0.85rem;
+  color: var(--text-light);
+}
+
+@media (max-width: 900px) {
+  .footerBottom {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .trustBadges {
+    justify-content: flex-start;
+  }
+}
+
 @media (max-width: 600px) {
+  .footer {
+    padding: 3rem 0 2rem;
+  }
   .footerGrid {
     grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .footerBottom {
+    gap: 2rem;
+    margin-top: 2rem;
+    padding-top: 2rem;
+  }
+  .newsletterField {
+    flex-direction: column;
+  }
+  .newsletterField button {
+    width: 100%;
+  }
+  .trustBadges {
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+  .copyright {
+    margin-top: 2rem;
   }
 }

@@ -1,16 +1,16 @@
 import type { Metadata } from "next";
-import { Outfit } from "next/font/google";
+import { Plus_Jakarta_Sans } from "next/font/google";
 import WhatsAppFloat from "@/components/WhatsAppFloat/WhatsAppFloat";
 import "./globals.css";
 
-const outfit = Outfit({
-  variable: "--font-outfit",
+const jakarta = Plus_Jakarta_Sans({
+  variable: "--font-jakarta",
   subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
-  title: "Care Loop | Your complete care journey after hospital",
-  description: "Post-discharge care, digital health records, medicine delivery, lab tests & radiology- seamlessly connected. All in one place",
+  title: "Careloop Healthcare | Your complete care journey after hospital",
+  description: "Comprehensive post-discharge care and patient monitoring platform by Careloop Healthcare.",
 };
 
 export default function RootLayout({
@@ -18,9 +18,36 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "MedicalOrganization",
+    "name": "Careloop Healthcare",
+    "url": "https://careloop.in",
+    "logo": "https://careloop.in/logo.png",
+    "description": "Comprehensive post-discharge care and patient monitoring platform.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Varanasi",
+      "addressRegion": "Uttar Pradesh",
+      "addressCountry": "India",
+      "streetAddress": "Kakarmata BLW"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+91-9236875061",
+      "contactType": "customer service"
+    }
+  };
+
   return (
     <html lang="en">
-      <body className={`${outfit.variable}`}>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
+      <body className={`${jakarta.variable}`}>
         {children}
         <WhatsAppFloat />
       </body>

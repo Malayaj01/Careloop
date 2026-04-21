@@ -1,6 +1,7 @@
 .availabilitySection {
-  padding: 8rem 0;
+  padding: 4rem 0;
   background-color: var(--secondary-blue);
+  margin-top: -1px;
 }
 
 .subtitle {
@@ -11,6 +12,71 @@
   margin-bottom: 3rem;
 }
 
+/* Active City Card */
+.activeCity {
+  max-width: 500px;
+  margin: 0 auto 3rem;
+  background: white;
+  border-radius: 20px;
+  padding: 2.5rem;
+  text-align: center;
+  border: 2px solid #22c55e;
+  box-shadow: 0 0 30px rgba(34, 197, 94, 0.15);
+}
+
+.activeBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: #22c55e;
+  color: white;
+  padding: 0.4rem 1rem;
+  border-radius: 30px;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  margin-bottom: 1.25rem;
+}
+
+.activeCityName {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.activeCityName svg {
+  color: var(--primary-blue);
+}
+
+.activeCityName h3 {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: var(--text-dark);
+}
+
+.activeCityDesc {
+  font-size: 1rem;
+  color: var(--text-gray);
+  line-height: 1.5;
+}
+
+/* Coming Soon Label */
+.comingSoonLabel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-gray);
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Coming Soon City Pills */
 .citiesGrid {
   display: flex;
   flex-wrap: wrap;
@@ -23,30 +89,28 @@
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
-  background: white;
-  color: var(--text-dark);
+  background: rgba(255, 255, 255, 0.5);
+  color: var(--text-gray);
   padding: 0.75rem 1.5rem;
   border-radius: 50px;
   font-size: 0.95rem;
   font-weight: 500;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+  border: 1px dashed rgba(11, 155, 234, 0.2);
+  opacity: 0.75;
   transition: all 0.2s ease;
-  border: 1px solid rgba(11, 155, 234, 0.1);
 }
 
 .cityPill:hover {
-  background: var(--primary-blue);
-  color: white;
+  opacity: 1;
+  background: white;
+  border-style: solid;
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(11, 155, 234, 0.2);
+  box-shadow: 0 4px 12px rgba(11, 155, 234, 0.1);
 }
 
 .cityPill svg {
-  color: var(--primary-blue);
-}
-
-.cityPill:hover svg {
-  color: white;
+  color: var(--text-gray);
 }
 
 .expansionBanner {

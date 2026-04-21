@@ -1,6 +1,6 @@
 .heroSection {
   background: linear-gradient(180deg, var(--bg-gradient-top) 0%, var(--bg-gradient-bottom) 100%);
-  padding: 8rem 0;
+  padding: 5rem 0;
   text-align: center;
 }
 
@@ -155,39 +155,110 @@
   box-shadow: 0 15px 30px rgba(11, 155, 234, 0.3);
 }
 
-/* FAQ */
+.formColumn {
+  position: relative;
+}
+
+.formBox {
+  background: white;
+  padding: 3rem;
+  border-radius: 24px;
+  box-shadow: var(--shadow-soft);
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+}
+
+.successOverlay {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  animation: fadeUp 0.5s ease;
+}
+
+.successOverlay h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 1rem 0 0.5rem;
+}
+
+.successOverlay p {
+  color: var(--text-gray);
+  max-width: 300px;
+}
+
+/* FAQ Accordion */
 .faqSection {
   background-color: var(--secondary-blue);
-  padding: 8rem 0;
+  padding: 6rem 0;
 }
 
-.faqGrid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
+.accordionGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-.faqCard {
+.faqItem {
   background: white;
-  padding: 2rem 2.5rem;
-  border-radius: 20px;
+  border-radius: 16px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+}
+
+.faqItem:hover {
+  border-color: var(--primary-blue);
+  transform: translateX(5px);
+}
+
+.faqItem.active {
   box-shadow: var(--shadow-soft);
 }
 
-.faqHead {
+.faqHeader {
+  padding: 1.5rem 2rem;
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  gap: 1rem;
-  margin-bottom: 1rem;
 }
 
-.faqHead h3 {
-  font-size: 1.2rem;
-  font-weight: 700;
+.faqHeader h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
   color: var(--text-dark);
 }
 
-.faqCard p {
+.chevron {
+  color: var(--text-light);
+  transition: transform 0.3s ease;
+}
+
+.faqItem.active .chevron {
+  transform: rotate(180deg);
+  color: var(--primary-blue);
+}
+
+.faqBody {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0, 1, 0, 1);
+  padding: 0 2rem;
+}
+
+.faqItem.active .faqBody {
+  max-height: 500px;
+  padding: 0 2rem 1.5rem;
+  transition: all 0.3s cubic-bezier(1, 0, 1, 0);
+}
+
+.faqBody p {
   color: var(--text-gray);
   line-height: 1.6;
 }
@@ -200,7 +271,10 @@
 }
 
 @media (max-width: 768px) {
-  .formRow, .faqGrid {
+  .formRow {
     grid-template-columns: 1fr;
+  }
+  .formBox {
+    padding: 2rem;
   }
 }
