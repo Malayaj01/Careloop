@@ -21,25 +21,25 @@ export default function OurLead() {
       name: "Kirti Singh",
       role: "FOUNDER & CEO",
       desc: "Building post-discharge care and medicine delivery solutions.",
-      image: "/assets/kirti.png"
+      image: "/assets/kirtif.png"
     },
     {
       name: "Dr. Mohit Kaushik",
       role: "CO-FOUNDER",
       desc: "MBBS IMS BHU, MS AIIMS NEW DELHI. Operation manager, popular group of hospitals.",
-      image: "/assets/mohit.png"
+      image: "/assets/mohitf.png"
     },
     {
       name: "Arvind Rawat",
       role: "CPO",
       desc: "Guiding product strategy to build an intuitive, seamless experience for both patients and healthcare providers.",
-      image: "/assets/arvind.png"
+      image: "/assets/arvindf.png"
     },
     {
       name: "Mac",
       role: "CTO",
       desc: "Spearheading technological infrastructure, ensuring bank-grade security, scalability, and robust EHR integrations.",
-      image: "/assets/Mac.png"
+      image: "/assets/macf.png"
     }
   ];
 
