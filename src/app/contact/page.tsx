@@ -6,6 +6,13 @@ import Footer from '@/components/Footer/Footer';
 import { Mail, Phone, MapPin, Clock, Send, ShieldQuestion, ChevronDown, CheckCircle2 } from 'lucide-react';
 import styles from './contact.module.css';
 
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Contact Us',
+  description: 'Get in touch with Careloop Healthcare. 24/7 care coordination and technical support for your recovery journey.',
+};
+
 export default function ContactPage() {
   const [activeFaq, setActiveFaq] = useState<number | null>(null);
   const [formStatus, setFormStatus] = useState<'idle' | 'submitting' | 'success'>('idle');

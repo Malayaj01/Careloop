@@ -4,6 +4,13 @@ import Image from 'next/image';
 import { Heart, ClipboardList, Bell, Activity, Shield, Users, Smartphone, CheckCircle } from 'lucide-react';
 import styles from './mycare.module.css';
 
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'My Care',
+  description: 'Your personal health dashboard. Manage digital health records, medication reminders, and post-discharge recovery seamlessly.',
+};
+
 export default function MyCarePage() {
   const features = [
     {

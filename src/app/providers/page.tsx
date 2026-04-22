@@ -6,6 +6,13 @@ import Footer from '@/components/Footer/Footer';
 import { Stethoscope, BarChart3, FileCheck, Users, ArrowRight, ClipboardCheck, Building2, UserPlus, ShieldCheck, CheckCircle2 } from 'lucide-react';
 import styles from './providers.module.css';
 
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'For Providers',
+  description: 'Partner with CareLoop to streamline post-discharge followups, reduce hospital readmissions, and manage digital health records efficiently.',
+};
+
 export default function ProvidersPage() {
   const [formStatus, setFormStatus] = useState<'idle' | 'submitting' | 'success'>('idle');
 
