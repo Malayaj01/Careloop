@@ -42,15 +42,15 @@ export default function Hero() {
         <div className={`glass-panel ${styles.statsBar}`}>
           <div className={styles.statItem}>
             <div className={styles.statValue}>30%</div>
-            <div className={styles.statLabel}>Reduction in<br/>Readmission</div>
+            <div className={styles.statLabel}>Reduced Readmissions</div>
           </div>
           <div className={styles.statItem}>
             <div className={styles.statValue}>10,000+</div>
-            <div className={styles.statLabel}>Patients<br/>Supported</div>
+            <div className={styles.statLabel}>Patients Supported</div>
           </div>
           <div className={styles.statItem}>
             <div className={styles.statValue}>24/7</div>
-            <div className={styles.statLabel}>Care<br/>Support</div>
+            <div className={styles.statLabel}>Care Support</div>
           </div>
         </div>
       </div>
