@@ -76,7 +76,6 @@
 /* ── Card ─────────────────────────────────────────────────── */
 .leadCard {
   display: flex;
-  align-items: flex-start;
   gap: 2rem;
   background: #ffffff;
   border-radius: 20px;
@@ -102,6 +101,7 @@
   box-shadow: 0 0 0 8px #ffffff, 0 0 30px 5px rgba(11, 155, 234, 0.15);
   overflow: hidden;
   margin: 8px; /* space for the glowing outline */
+  align-self: flex-start;
 }
 
 .profileImg {
