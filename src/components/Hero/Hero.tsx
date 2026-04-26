@@ -18,9 +18,6 @@ export default function Hero() {
             <Link href="#services">
               <button className={styles.btnGetStarted}>Get Started</button>
             </Link>
-            <Link href="#how-it-works">
-              <button className={styles.btnBookFollowUp}>Book Follow-Up</button>
-            </Link>
           </div>
         </div>
         
@@ -41,8 +38,8 @@ export default function Hero() {
       <div className={styles.statsWrapper}>
         <div className={`glass-panel ${styles.statsBar}`}>
           <div className={styles.statItem}>
-            <div className={styles.statValue}>30%</div>
-            <div className={styles.statLabel}>Reduced Readmissions</div>
+            <div className={styles.statValue}>78%</div>
+            <div className={styles.statLabel}>Better Recovery Outcomes</div>
           </div>
           <div className={styles.statItem}>
             <div className={styles.statValue}>10,000+</div>

@@ -36,8 +36,8 @@ export default function ForDoctors() {
             <div className={styles.dashboardPlaceholder}>
               <div className={styles.mockCard}>
                 <div className={styles.mockStat}>
-                  <span className={styles.mockValue}>↓ 30%</span>
-                  <span className={styles.mockLabel}>Readmissions</span>
+                  <span className={styles.mockValue}>↑ 78%</span>
+                  <span className={styles.mockLabel}>Better Patient Health Outcomes</span>
                 </div>
                 <div className={styles.mockStat}>
                   <span className={styles.mockValue}>10K+</span>

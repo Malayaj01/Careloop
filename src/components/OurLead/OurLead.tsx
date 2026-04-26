@@ -21,25 +21,29 @@ export default function OurLead() {
       name: "Kirti Singh",
       role: "FOUNDER & CEO",
       desc: "Building post-discharge care and medicine delivery solutions.",
-      image: "/assets/kirtif.png"
+      image: "/assets/kirtif.png",
+      linkedin: "https://www.linkedin.com/in/kirti-singh-335a553a9?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
     },
     {
       name: "Dr. Mohit Kaushik",
-      role: "CO-FOUNDER",
-      desc: "MBBS IMS BHU, MS AIIMS NEW DELHI. Operation manager, popular group of hospitals.",
-      image: "/assets/mohitf.png"
+      role: "DIRECTOR & CO-FOUNDER",
+      desc: "MBBS IMS BHU, MS AIIMS NEW DELHI.",
+      image: "/assets/mohitf.png",
+      linkedin: "#"
     },
     {
       name: "Arvind Rawat",
       role: "CPO",
       desc: "Guiding product strategy to build an intuitive, seamless experience for both patients and healthcare providers.",
-      image: "/assets/arvindf.png"
+      image: "/assets/arvindf.png",
+      linkedin: "https://www.linkedin.com/in/arvind-rawat-86222928b"
     },
     {
       name: "Mac",
       role: "CTO",
       desc: "Spearheading technological infrastructure, ensuring bank-grade security, scalability, and robust EHR integrations.",
-      image: "/assets/macf.png"
+      image: "/assets/macf.png",
+      linkedin: "#"
     }
   ];
 
@@ -79,7 +83,13 @@ export default function OurLead() {
                 </div>
                 <p>{lead.desc}</p>
                 <div className={styles.socials}>
-                  <a href="#" className={styles.linkedinBtn} aria-label={`${lead.name} LinkedIn`}>
+                  <a 
+                    href={lead.linkedin} 
+                    className={styles.linkedinBtn} 
+                    aria-label={`${lead.name} LinkedIn`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <LinkedinIcon size={16} />
                   </a>
                 </div>

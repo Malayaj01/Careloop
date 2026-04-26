@@ -126,8 +126,8 @@ export default function ProvidersPage() {
               <span className={styles.statLabel}>Patients Managed</span>
             </div>
             <div className={styles.statItem}>
-              <span className={styles.statValue}>30%</span>
-              <span className={styles.statLabel}>Reduction in Readmissions</span>
+              <span className={styles.statValue}>78%</span>
+              <span className={styles.statLabel}>Increase in Better Recovery Outcomes</span>
             </div>
           </div>
         </div>

@@ -26,10 +26,12 @@ export default function HowItWorks() {
   ];
 
   const patientSteps = [
-    "Get Enrolled",
-    "Daily Health Update",
-    "Medicine Reminders",
-    "Chat with doctors"
+    "Personalised Recovery Care Plan",
+    "Vital Monitoring",
+    "Automated Follow Up",
+    "Health Integration Services",
+    "Personalised Health Vault",
+    "One Tap Support System"
   ];
 
   const hospitalSteps = [
